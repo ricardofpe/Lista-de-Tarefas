@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(53, 129, 43);
+}
+
+main{
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    width: 80%;
+  margin: 60px auto ;
+  box-shadow: 0 6px 10px rgba(0,0,0,1);
+}
+
+.form-adicionar{
+    display: flex;
+    margin-bottom: 70px;
+    gap:10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-adicionar{
+    width: 100%;
+    flex: 1;
+    padding: 13px;
+    border-radius: 7px;
+    border:1px solid gray;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 500;
+  
+}
+
+.button-adicionar{
+    background-color: rgb(124, 170, 255);
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 7px;
+    color: whitesmoke;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    
+}
