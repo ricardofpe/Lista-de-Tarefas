@@ -54,3 +54,83 @@ main{
     cursor: pointer;
     
 }
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th{
+    padding: 10px 15px;
+    border: 1px solid gray;
+    text-align: center;
+}
+
+td{
+    color: rgb(97, 95, 95);
+    font-weight: 600;
+}
+
+tr:nth-child(even){
+    background-color: rgb(211, 211, 211);
+}
+
+select{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    background-color:rgb(211, 211, 211) ;
+    text-transform: capitalize;
+}
+
+select:hover{
+    background-color: rgb(187, 187, 187);
+}
+
+.botao-acao{
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    background-color:rgb(211, 211, 211);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+}
+
+.botao-acao:nth-child(1){
+    background-color: rgb(52, 223, 157);
+    margin-right: 6px;
+}
+
+.botao-acao:nth-child(2){
+    background-color: rgb(207, 30, 30);
+
+}
+
+
+
+
+@media screen and (max-width: 835px) {
+
+main{
+    padding: 5px;
+    width: 90%;
+ 
+    
+}
+
+.botao-acao:nth-child(1){
+
+    margin-right: 0px;
+    margin-bottom: 6px;
+}
+
+select{
+font-size: 12px;
+width: 100px;
+}
+}
