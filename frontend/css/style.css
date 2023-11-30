@@ -25,6 +25,9 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    padding-right:10px ;
+    padding-left:10px ;
 }
 
 .input-adicionar{
@@ -36,6 +39,7 @@ main{
     outline: none;
     font-size: 1rem;
     font-weight: 500;
+    margin-top: 10px;
   
 }
 
@@ -52,18 +56,22 @@ main{
     justify-content: center;
     font-weight: 600;
     cursor: pointer;
-    
+    margin-top: 10px;
 }
 
 table{
     border-collapse: collapse;
     width: 100%;
+
+ 
 }
 
 td, th{
     padding: 10px 15px;
     border: 1px solid gray;
     text-align: center;
+
+    
 }
 
 td{
