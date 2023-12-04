@@ -75,13 +75,16 @@ td, th{
 }
 
 td{
-    color: rgb(97, 95, 95);
+    color: rgb(27, 27, 27);
     font-weight: 600;
 }
 
 tr:nth-child(even){
-    background-color: rgb(211, 211, 211);
+    background-color: rgb(233, 233, 233);
+    
 }
+
+
 
 select{
     width: 100%;
