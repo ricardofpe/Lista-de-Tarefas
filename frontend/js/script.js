@@ -38,6 +38,20 @@ const deleteTask = async (id) =>{
 
 }
 
+const updateTask = async ({id,title,status})  =>{
+
+
+
+  await fetch(`http://localhost:3333/tasks/${id}`,{
+    method: 'put',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({title, status}),
+  });
+
+  loadTask();
+
+}
+
 const formatDate = (dateUTC) => {
   const options = { dateStyle: 'long', timeStyle: 'short' };
   const date = new Date(dateUTC).toLocaleString('pt-br', options);
@@ -88,11 +102,30 @@ const createTask = (task) => {
   const tdActions = createElement('td');
 
   const select = createSelect(status);
+  
+  select.addEventListener('change', ({ target }) => updateTask({ ...task, status: target.value }));
 
 const editButton = createElement('button', '','<span class="material-symbols-outlined">edit</span>' )
 const deleteButton = createElement('button', '','<span class="material-symbols-outlined">delete</span>' )
 
 
+const editForm = createElement('form');
+const editInput = createElement('input');
+
+editInput.value = title;
+editForm.appendChild(editInput);
+
+editForm.addEventListener('submit', (event) =>{
+event.preventDefault();
+
+
+updateTask({id,title:editInput.value, status});
+});
+
+editButton.addEventListener('click', () =>{
+  tdTitle.innerText ='';
+  tdTitle.appendChild(editForm);
+});
 
 editButton.classList.add('botao-acao');
 deleteButton.classList.add('botao-acao');
